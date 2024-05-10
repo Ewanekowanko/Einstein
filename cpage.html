@@ -1,0 +1,373 @@
+<html>
+<head>
+<title>Einstein</title>
+
+<style>
+
+.shiny::after {
+  content: "";
+  position: absolute;
+  top: calc(var(--y, 0) * 1px - 50px);
+  left: calc(var(--x, 0) * 1px - 50px);
+  width:100px;
+  height:100px;
+  background: radial-gradient(white, #3984ff00 70%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.shiny:hover::after {
+  opacity: 0.2;
+}
+
+body {
+  padding-top:1px;	
+  background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.4)),url('Einstein.jpg');
+  background-size: cover;
+  padding-bottom: 120px;
+  border-radius;
+  background-attackment:fixed;
+
+}
+
+.header h1 {
+  text-align: center;
+  color: #FFF1F1;
+  padding-top:80px;
+  font-size:40px;
+}
+
+.navbar {
+ height:12%;
+ display:flex;
+ align-items:center; 	
+}
+
+nav {
+ text-align:right;
+}
+
+nav, ul, li {
+  display:inline-block;
+ list-style:none;
+ cursor:pointer;
+ z-index:1;
+ padding:35px;
+ position:relative;
+}
+
+.logo {
+ border-radius:50%;
+ cursor:pointer;
+ z-index:6;
+ width:70px;
+ height:70px;
+ margin-left: 5px;
+ margin-top: 5px;
+}
+
+.logo:hover {
+ border:solid 1px #111111;
+}
+  
+#left {
+ margin-left:710px;
+}
+
+nav ul li a {
+ text-decoration: none;
+ font-size:15px;
+ color:#fff;
+}
+
+nav ul li a::after {
+ content:'';
+ width:0%;
+ height:2px;
+ background:#fecc27;
+ display:block;
+ margin:auto;
+ transition:0.5s;
+}
+
+nav ul li a:hover::after {
+ width:100%;
+}
+
+#left1 {
+ margin-left:160px;
+}
+
+.content {
+ padding-top:50px;
+ display:flex;
+}
+
+
+@font-face {
+    font-family: Gliker;
+    src: local('Gliker Regular'), local('Gliker-Regular'),
+        url('Gliker-Regular.woff2') format('woff2'),
+        url('Gliker-Regular.woff') format('woff'),
+        url('Gliker-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+* {
+ font-family:gliker;
+}
+
+.content1 {
+ transition:0.8s;
+ z-index:1;
+ margin-left:150px;
+ cursor:pointer;
+ box-shadow:5px 5px 3px #111111;
+}
+
+.content1:hover {
+ height:320px;
+ width:250px;
+}
+
+.content2 {
+ transition: 0.8s;
+ z-index:2;
+ cursor:pointer;
+ box-shadow:5px 5px 3px #111111;
+}
+
+.content2:hover {
+ height:320px;
+ width:250px;
+}
+
+.content3 {
+ transition:0.8s;
+ z-index:1;
+ cursor:pointer;
+ box-shadow:5px 5px 3px #111111;
+}
+
+.content3:hover {
+ height:320px;
+ width:250px;
+}
+
+.content4 {
+ transition:0.8s;
+ z-index:1;
+ cursor:pointer;
+ display:flex;
+ box-shadow:5px 5px 3px #111111;
+}
+
+.content4:hover {
+ height:320px;
+ width:250px;
+ 
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  transition: 0.5s;
+  padding-top: 120px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+#mySidebar {
+ display:flex;
+ z-index:4;
+ color: #cb9c00;
+ overflow:auto;
+ resize:both;
+}
+
+
+
+</style>
+</head>
+<body class="shiny">
+<div id="mySidebar" class="sidebar">
+  <a id="close "href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+ <p>Starting in August 2023, our grade 8 Einstein section began with lots of excitement, and our main section is where all the fun happens! We've got the best adviser, Sir Lipa, who's super awesome and helps us out with everything. Together, we're tackling all sorts of stuff and learning heaps along the journey. It's like being part of a big adventure every day, and we're all thrilled to see what's in store for us. And at the end of the school year, we will forever treasure ourselves and especially the memories we made together. We will never forget how we young dumb kids go through a lot of struggles and stress but, still survive.</p>
+</div>
+<div class="header">
+<div class="container">
+<div class="navbar">
+<img src="logo.jpg" class="logo">
+<nav>
+<ul>
+<li id="left"><a onclick="myFunctio()">Home</a></li>
+<li><a onclick="myFunction()">More</a></li>
+<li><a class="openbtn" onclick="openNav()">About</a></li>
+</ul>
+</nav>
+</div>
+</div>
+
+<h1>EINSTEIN MAIN SECTION</h1>
+</div>
+<div class="content" id="content">
+<img class="content1" id="content1" id="left1" src="intro.jfif" onmouseover="myFuncti()" onmouseout="myFunct()" width:0px; height=0px;>
+<img class="content2" id="content2" src="yb.jfif" onmouseover="myFunc()" onmouseout="myFunc1()" width=0px; height=0px; hspace=50>
+<img class="content3" id="content3" src="cleaners.jfif" onmouseover="myFun()" onmouseout="myFun1()" width=0px; height=0px;>
+<img class="content4" id="content4" src="achieve.jfif" onmouseover="myFu()" onmouseout="myFu1()" width=0px; height=0px; hspace=50>
+</div>
+<script>
+const button = document.querySelector(".shiny");
+
+const readout = document.querySelector("p");
+
+button.addEventListener("mousemove", (e) => {
+  const { x, y } = button.getBoundingClientRect();
+  button.style.setProperty("--x", e.clientX - x);
+  button.style.setProperty("--y", e.clientY - y);
+});
+</script>  	    
+
+<script>
+function myFunction() {
+    document.getElementById('content1').style.transitionProperty = 'width,height';  
+    document.getElementById('content1').style.width  = '205px';
+    document.getElementById('content1').style.height  = '280px';
+    document.getElementById('content1').style.transitionTimingFunction  = 'ease-out';
+    document.getElementById('content2').style.transitionProperty = 'width,height';  
+    document.getElementById('content2').style.width  = '205px';
+    document.getElementById('content2').style.height  = '280px';
+    document.getElementById('content2').style.transitionTimingFunction  = 'ease-out'; 
+    document.getElementById('content3').style.transitionProperty = 'width,height';  
+    document.getElementById('content3').style.width  = '205px';
+    document.getElementById('content3').style.height  = '280px';
+    document.getElementById('content3').style.transitionTimingFunction  = 'ease-out';
+    document.getElementById('content4').style.transitionProperty = 'width,height';  
+    document.getElementById('content4').style.width  = '205px';
+    document.getElementById('content4').style.height  = '280px';
+    document.getElementById('content4').style.transitionTimingFunction  = 'ease-out';
+    document.querySelector('.shiny').style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6)),url(Einstein.jpg)';
+    
+ 
+}
+
+function myFunctio() {
+    document.getElementById('content1').style.transitionProperty = 'width,height';  
+    document.getElementById('content1').style.width  = '0px';
+    document.getElementById('content1').style.height  = '0px';
+    document.getElementById('content1').style.transitionTimingFunction  = 'ease-out';
+    document.getElementById('content2').style.transitionProperty = 'width,height';  
+    document.getElementById('content2').style.width  = '0px';
+    document.getElementById('content2').style.height  = '0px';
+    document.getElementById('content2').style.transitionTimingFunction  = 'ease-out';
+    document.getElementById('content3').style.transitionProperty = 'width,height';  
+    document.getElementById('content3').style.width  = '0px';
+    document.getElementById('content3').style.height  = '0px';
+    document.getElementById('content3').style.transitionTimingFunction  = 'ease-out';
+    document.getElementById('content4').style.transitionProperty = 'width,height';  
+    document.getElementById('content4').style.width  = '0px';
+    document.getElementById('content4').style.height  = '0px';
+    document.getElementById('content4').style.transitionTimingFunction  = 'ease-out';
+    document.querySelector('.shiny').style.backgroundImage = 'linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.4)),url(Einstein.jpg)';
+
+
+}
+
+function myFuncti() {
+    document.getElementById('content1').style.transitionProperty = 'width,height';   
+    document.getElementById('content1').style.height = '320px';
+    document.getElementById('content1').style.width = '250px';
+}
+
+function myFunc() {
+    document.getElementById('content2').style.transitionProperty = 'width,height';   
+    document.getElementById('content2').style.height = '320px';
+    document.getElementById('content2').style.width = '250px';              
+}
+
+function myFun() {
+    document.getElementById('content3').style.transitionProperty = 'width,height';   
+    document.getElementById('content3').style.height = '320px';
+    document.getElementById('content3').style.width = '250px'; 
+}     
+
+function myFu() {
+    document.getElementById('content4').style.transitionProperty = 'width,height';   
+    document.getElementById('content4').style.height = '320px';
+    document.getElementById('content4').style.width = '250px';
+}
+
+function myFunct() {
+    document.getElementById('content1').style.transitionProperty = 'width,height';
+    document.getElementById('content1').style.height = '280px';
+    document.getElementById('content1').style.width = '205px';
+}
+
+function myFunc1() {
+    document.getElementById('content2').style.transitionProperty = 'width,height';
+    document.getElementById('content2').style.height = '280px';
+    document.getElementById('content2').style.width = '205px';
+}
+
+function myFun1() {
+    document.getElementById('content3').style.transitionProperty = 'width,height';
+    document.getElementById('content3').style.height = '280px';
+    document.getElementById('content3').style.width = '205px';
+}
+
+function myFu1() {
+    document.getElementById('content4').style.transitionProperty = 'width,height';
+    document.getElementById('content4').style.height = '280px';
+    document.getElementById('content4').style.width = '205px';
+}
+</script>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "350px";
+  document.getElementById("main").style.marginTop = "350px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+
+
+</body>
+</html>
